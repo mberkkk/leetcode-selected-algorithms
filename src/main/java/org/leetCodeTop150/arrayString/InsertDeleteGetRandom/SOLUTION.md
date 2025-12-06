@@ -32,21 +32,22 @@ Bu yöntemle listenin geri kalanına dokunmadan, sadece son elemanla işlem yapa
 
 Listemiz `[10, 3, 20, 50]` olsun ve biz **3**'ü silmek isteyelim.
 ```mermaid
-graph TD
+graph LR
+
 subgraph Adım 1: Hedefi Bul
 A1[10] --- A2[3] --- A3[20] --- A4[50]
 style A2 fill:#ff9999,stroke:#333,stroke-width:2px
 end
 
-    subgraph Adım 2: Son Elemanı Taşı
-    B1[10] --- B2[50] --- B3[20] --- B4[50]
-    style B2 fill:#99ff99,stroke:#333,stroke-width:2px
-    style B4 fill:#cccccc,stroke:#333,stroke-dasharray: 5 5
-    end
+subgraph Adım 2: Son Elemanı Taşı
+B1[10] --- B2[50] --- B3[20] --- B4[50]
+style B2 fill:#99ff99,stroke:#333,stroke-width:2px
+style B4 fill:#cccccc,stroke:#333,stroke-dasharray: 5 5
+end
 
-    subgraph Adım 3: Sonuncuyu Sil
-    C1[10] --- C2[50] --- C3[20]
-    end
+subgraph Adım 3: Sonuncuyu Sil
+C1[10] --- C2[50] --- C3[20]
+end
 ```
 
 ### 5. Map Senkronizasyonu
